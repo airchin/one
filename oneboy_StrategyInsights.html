@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ONE BOY Strategy Insights v20｜投放成效與 AI 策略模擬</title>
+<title>ONE BOY Strategy Insights v21｜投放成效與 AI 策略模擬</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@500;700;800&display=swap" rel="stylesheet">
 <script type="importmap">
@@ -995,6 +995,52 @@ body.data-view .workspace-shell [id]{scroll-margin-top:94px}
 @media(max-width:1100px){.ob20-priors{grid-template-columns:repeat(2,1fr)}.ob20-kpis{grid-template-columns:repeat(2,1fr)}.ob20-2col{grid-template-columns:1fr}}
 @media(max-width:700px){.ob20-priors,.ob20-kpis,.ob20-ai-grid{grid-template-columns:1fr}.ob20-field{min-width:100%}.ob20-workspace{padding-bottom:90px}}
 
+
+
+/* v21 readability, active navigation, dropdown dismissal & neutral executive palette */
+body.data-view #workspace{font-size:18px;line-height:1.65}
+body.data-view .workspace-shell h1,body.data-view .ob-pagehead h1{font-size:33px}
+body.data-view .ws-head p,body.data-view .ob-pagehead p{font-size:16px}
+body.data-view .ws-panel h3,body.data-view .ob-panel h3{font-size:21px}
+body.data-view .ws-muted,body.data-view .ws-val-note,body.data-view .ob-panel .ws-muted,body.data-view .ws-note{font-size:15.5px;line-height:1.7}
+body.data-view .ws-data-table{font-size:16px}
+body.data-view .ws-data-table th,body.data-view .ws-data-table td{font-size:15.5px;line-height:1.45;padding:13px 12px}
+body.data-view .ws-chip,body.data-view .ob-panel .ws-chip{font-size:14px}
+body.data-view .ws-field label,body.data-view .ob19-controls label,body.data-view .ob19-inline{font-size:15px}
+body.data-view select,body.data-view .ws-field input,body.data-view .ws-field select,body.data-view .ob19-controls input,body.data-view .ob19-controls select{font-size:16px;min-height:44px}
+body.data-view .ob19-note,body.data-view .ob19-reconcile,body.data-view .ob20-note,body.data-view .ob20-ai-card p{font-size:15px;line-height:1.75}
+body.data-view .ob19-legend>div,body.data-view .ob19-linelegend,body.data-view .ob20-legend{font-size:15px}
+body.data-view #workspace svg text{font-size:14.5px!important}
+body.data-view .wk-float-nav{color:#365c83}
+body.data-view .workspace-shell .wk-float-nav .wk-float-items{position:relative;gap:4px;padding:10px;background:rgba(255,255,255,.97);border-color:#ccdce8;border-radius:14px}
+body.data-view .workspace-shell .wk-float-nav .wk-float-btn{position:relative;min-height:43px!important;width:102px!important;max-width:102px!important;min-width:102px!important;font-size:14.5px!important;border-radius:8px!important;text-align:center!important}
+body.data-view .workspace-shell .wk-float-nav .wk-float-label{font-size:14.5px!important;font-weight:800!important}
+body.data-view .workspace-shell .wk-float-btn.active{background:#356896!important;color:#fff!important;box-shadow:inset 3px 0 0 #f0b45c!important}
+body.data-view .workspace-shell .wk-float-btn:hover{background:#e9f2fb!important;color:#244d77!important}
+body.data-view .workspace-shell .wk-float-btn.active:hover{background:#356896!important;color:#fff!important}
+body.data-view .ob-ops-nav button.on,body.data-view .ob-subtabs button.on{background:#e7f0fa;border-color:#9fbfdf;color:#244f79}
+body.data-view .ob-ops-nav button span{color:#4b79ae}
+body.data-view .ob-workspace .ws-eyebrow{color:#4d769e}
+body.data-view .v18-scope-row b,body.data-view .v18-fin-filters label b{color:#385f88}
+body.data-view .v17-donut-legend button.active,body.data-view .v17-donut-legend button:hover{background:#eaf3fb}
+body.data-view .v17-reset{background:#f0f5fc;color:#356896;border-color:#c2d5e7}
+body.data-view .ob-channel-option.active{background:#eef5fd;border-color:#94b8da}
+body.data-view .v17-region-track span:first-child{background:#4b79ae}
+body.data-view .ob-campbar i{background:#507fae}
+body.data-view .ob-camp-mini strong{color:#284f77}
+body.data-view .ob21-trend{display:inline-flex;align-items:center;gap:4px;padding:5px 9px;border-radius:7px;font-size:14px;font-weight:800;white-space:nowrap;letter-spacing:0}
+body.data-view .ob21-trend.up{background:#fff1e5;color:#a45f28}
+body.data-view .ob21-trend.down{background:#eaf3ff;color:#376ea7}
+body.data-view .ob21-trend.flat{background:#eff2f5;color:#5c6975}
+body.data-view .ob21-trend.no-base{background:#f0f3f7;color:#788798}
+body.data-view .ob21-missing{background:#fff2df;border-radius:5px;padding:4px 6px;color:#946a35;font-weight:800}
+.ob21-source-note{background:#eff6fd;border:1px solid #c4d9ea;border-left:4px solid #5384b5;border-radius:10px;color:#2c567a;font-size:15.5px;line-height:1.75;padding:12px 16px;margin:12px 0}
+.ob21-source-note strong{color:#a46c34}.ob21-source-note span{color:#6483a1;font-size:13px;margin-left:10px}
+body.data-view .ws-multi-panel{z-index:90}
+body.data-view .ws-multi[open] summary{border-color:#568dbc;box-shadow:0 0 0 2px rgba(86,141,188,.09)}
+@media(max-width:1100px){body.data-view .workspace-shell .wk-float-btn{width:89px!important;min-width:89px!important;max-width:89px!important}}
+@media(max-width:700px){body.data-view #workspace{font-size:16px}body.data-view .ws-data-table th,body.data-view .ws-data-table td{font-size:14px}body.data-view .ws-panel h3,body.data-view .ob-panel h3{font-size:18px}}
+
 </style>
 </head>
 <body>
@@ -1002,7 +1048,7 @@ body.data-view .workspace-shell [id]{scroll-margin-top:94px}
 <div id="loader"><b>ONE BOY</b><span>正在載入 ONE BOY 戰略洞察…</span><div id="err"></div></div>
 
 <header id="top" class="glass">
-  <div class="brand"><b>ONE BOY<sup>®</sup></b><div><span class="t">戰略洞察 <small style="font-size:13px;color:#8de0ff">v20</small></span><span class="s">Marketing Intelligence OS｜貨物流 × 金流 × 資料流</span></div></div>
+  <div class="brand"><b>ONE BOY<sup>®</sup></b><div><span class="t">戰略洞察 <small style="font-size:13px;color:#8de0ff">v21</small></span><span class="s">Marketing Intelligence OS｜貨物流 × 金流 × 資料流</span></div></div>
   <nav class="tabs" id="tabs">
     <button class="tab on" data-tab="overview">🏝 <span>首頁</span>
     </button><button class="tab" data-tab="operations">📊 <span>營運總覽</span></button>
@@ -1895,6 +1941,65 @@ function wkCompCell(label,value,delta,sub){return `<div class="ws-comparison-cel
 function wkFloatNav(page,items){
  return `<nav class="wk-float-nav" data-page="${page}" aria-label="頁內快速導覽"><div class="wk-float-items">${items.map(([id,label],i)=>`<button type="button" class="wk-float-btn ${i===0?'active':''}" data-action="scroll-to" data-target="${id}" title="跳至${label}" aria-label="跳至${label}"><span class="wk-float-label">${label}</span></button>`).join('')}</div></nav>`;
 }
+
+/* v21 — single source of truth for active section. The workspace div, not window, scrolls. */
+function ob21SyncNav(){
+ const scroll=document.querySelector('#workspace'),holder=document.querySelector('#workspaceBody');
+ if(!scroll||!holder||!document.body.classList.contains('data-view'))return;
+ const nav=holder.querySelector('.wk-float-nav');if(!nav)return;
+ const buttons=Array.from(nav.querySelectorAll('[data-action="scroll-to"]'));
+ const border=scroll.getBoundingClientRect().top+Math.min(125,scroll.clientHeight*.2);
+ let active=0;
+ buttons.forEach((b,i)=>{const el=document.getElementById(b.dataset.target);if(el&&el.getBoundingClientRect().top<=border)active=i;});
+ if(scroll.scrollTop+scroll.clientHeight>=scroll.scrollHeight-18)active=buttons.length-1;
+ buttons.forEach((b,i)=>{
+   const on=i===active;b.classList.toggle('active',on);
+   if(on)b.setAttribute('aria-current','location');else b.removeAttribute('aria-current');
+ });
+ nav.style.setProperty('--nav-progress',buttons.length>1?((active/(buttons.length-1))*100).toFixed(1)+'%':'0%');
+}
+function ob21CloseFilterPopups(event){
+ const pane=document.querySelector('#workspaceBody');if(!pane)return;
+ const inside=event.target?.closest?.('details.ws-multi');
+ pane.querySelectorAll('details.ws-multi[open]').forEach(detail=>{
+   if(detail!==inside){detail.open=false;
+     if(detail.id==='finMulti')S.finFilterOpen=false;
+     if(detail.id==='opRegionMulti')S.opRegionOpen=false;
+     if(detail.id==='opCountyMulti')S.opCountyOpen=false;
+   }
+ });
+}
+let ob21PopupEventsBound=false;
+function ob21BindWorkspaceUI(){
+ const scroll=document.querySelector('#workspace');if(!scroll)return;
+ if(!scroll.dataset.ob21ScrollBound){
+   scroll.addEventListener('scroll',()=>{
+     if(scroll.__ob21Raf)return;
+     scroll.__ob21Raf=requestAnimationFrame(()=>{scroll.__ob21Raf=0;ob21SyncNav();});
+   },{passive:true});
+   scroll.dataset.ob21ScrollBound='yes';
+ }
+ if(!ob21PopupEventsBound){
+   document.addEventListener('pointerdown',ob21CloseFilterPopups,true);
+   document.addEventListener('keydown',e=>{
+     if(e.key==='Escape'){
+       ob21CloseFilterPopups({target:null});
+       if(document.activeElement?.matches('details.ws-multi summary'))document.activeElement.blur();
+     }
+   });
+   ob21PopupEventsBound=true;
+ }
+ requestAnimationFrame(ob21SyncNav);
+}
+function ob21Trend(cur,base){
+ const a=Number(cur)||0,b=Number(base)||0;
+ if(!b)return `<span class="ob21-trend no-base" title="比較基期無數據">${a?'＋ 新增':'—'}</span>`;
+ const pct=(a/b-1)*100,steady=Math.abs(pct)<.5;
+ const direction=steady?'flat':pct>0?'up':'down';
+ const label=steady?'→ 持平':pct>0?'↑ 上升':'↓ 下降';
+ return `<span class="ob21-trend ${direction}" title="相較前一年：${pct>=0?'+':''}${pct.toFixed(1)}%">${label} ${steady?'':(pct>=0?'+':'')+pct.toFixed(1)+'%'}</span>`;
+}
+
 function wkMarketingAI(rows){
  const stat=wkStat(rows), sel=wkSelectedSpend(rows), avg=rows.length?sel/rows.length:0;
  const shares=WK_PLAT.filter(([k])=>S.channels.includes(k)).map(([k,n])=>({k,n,spend:rows.reduce((a,r)=>a+wkChannel(MKT[r.y],r.i,k),0)})).sort((a,b)=>b.spend-a.spend);
@@ -2007,7 +2112,7 @@ function wkOpsDemo(rows,stat){
  const delivered7=Math.max(40,Math.round(orderCount/24));
  const complaint=Math.max(6,Math.round(orderCount/190));
  const shares=[
-  {name:'官網 EC',share:0.39,growth:4.8,color:'#7e8f2a'},
+  {name:'官網 EC',share:0.39,growth:4.8,color:'#527cae'},
   {name:'門市 POS',share:0.22,growth:2.1,color:'#4d86d6'},
   {name:'MOMO / 平台',share:0.16,growth:-1.4,color:'#d48b43'},
   {name:'蝦皮商城',share:0.14,growth:6.2,color:'#9b6dd6'},
@@ -2048,7 +2153,7 @@ function wkOpsSparkSvg(trend){
  const mk=(key)=>trend.map((d,i)=>`${i?'L':'M'}${sx(i).toFixed(1)} ${sy(d[key]).toFixed(1)}`).join(' ');
  const total=trend.map((d,i)=>`${i?'L':'M'}${sx(i).toFixed(1)} ${sy(d.web+d.store+d.marketplace+d.group).toFixed(1)}`).join(' ');
  const yTicks=[0.25,0.5,0.75,1].map(r=>min+(max-min)*r);
- return `<svg viewBox="0 0 ${w} ${h}" class="wk-spark"><defs><linearGradient id="gradOpsArea" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="rgba(92,169,255,.28)"/><stop offset="100%" stop-color="rgba(92,169,255,0)"/></linearGradient></defs>${yTicks.map(v=>`<line x1="${p}" y1="${sy(v)}" x2="${w-p}" y2="${sy(v)}" stroke="#d8e6ef" stroke-dasharray="4 4"/><text x="2" y="${sy(v)+4}" fill="#6d8498" font-size="12">${wkMoney(v).replace('元','')}</text>`).join('')}<path d="${total} L ${w-p} ${h-p} L ${p} ${h-p} Z" fill="url(#gradOpsArea)" opacity=".95"/><path d="${mk('web')}" fill="none" stroke="#7e8f2a" stroke-width="3"/><path d="${mk('store')}" fill="none" stroke="#4d86d6" stroke-width="2.5"/><path d="${mk('marketplace')}" fill="none" stroke="#d48b43" stroke-width="2.5"/><path d="${mk('group')}" fill="none" stroke="#9b6dd6" stroke-width="2.5"/>${trend.map((d,i)=>`<circle cx="${sx(i)}" cy="${sy(d.web+d.store+d.marketplace+d.group)}" r="2.8" fill="#1b3e68"/>`).join('')}</svg>`;
+ return `<svg viewBox="0 0 ${w} ${h}" class="wk-spark"><defs><linearGradient id="gradOpsArea" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="rgba(92,169,255,.28)"/><stop offset="100%" stop-color="rgba(92,169,255,0)"/></linearGradient></defs>${yTicks.map(v=>`<line x1="${p}" y1="${sy(v)}" x2="${w-p}" y2="${sy(v)}" stroke="#d8e6ef" stroke-dasharray="4 4"/><text x="2" y="${sy(v)+4}" fill="#6d8498" font-size="12">${wkMoney(v).replace('元','')}</text>`).join('')}<path d="${total} L ${w-p} ${h-p} L ${p} ${h-p} Z" fill="url(#gradOpsArea)" opacity=".95"/><path d="${mk('web')}" fill="none" stroke="#527cae" stroke-width="3"/><path d="${mk('store')}" fill="none" stroke="#4d86d6" stroke-width="2.5"/><path d="${mk('marketplace')}" fill="none" stroke="#d48b43" stroke-width="2.5"/><path d="${mk('group')}" fill="none" stroke="#9b6dd6" stroke-width="2.5"/>${trend.map((d,i)=>`<circle cx="${sx(i)}" cy="${sy(d.web+d.store+d.marketplace+d.group)}" r="2.8" fill="#1b3e68"/>`).join('')}</svg>`;
 }
 function wkOpsOverviewPanel(demo,stat){
  return `<div class="ws-hero-grid">
@@ -2065,7 +2170,7 @@ function wkOpsOverviewPanel(demo,stat){
  ${demo.shares.map(s=>`<div class="ws-channel-row"><span>${s.name}</span><span class="ws-channel-amount">${wkMoney(s.amount)}</span><div class="ws-track"><i style="width:${s.share*100}%;background:${s.color}"></i></div><span class="ws-channel-share">${wkPct(s.share*100)}｜<b class="${s.growth>=0?'wk-pos':'wk-neg'}">${wkOpsPctDelta(s.growth)}</b></span></div>`).join('')}
  </section></div>
  <div class="ws-hero-grid" style="margin-top:14px">
- <section class="ws-panel glass"><div class="ws-panel-head"><div><h3>近 30 日營收趨勢</h3><p class="ws-muted">示意日營收 by 通路，方便看波峰波谷與配速</p></div><span class="ws-chip">30 Days</span></div><div class="wk-spark-wrap">${wkOpsSparkSvg(demo.trend)}</div><div class="ws-chart-legend"><span><i class="ws-legend-dot" style="background:#7e8f2a"></i>官網 EC</span><span><i class="ws-legend-dot" style="background:#4d86d6"></i>門市 POS</span><span><i class="ws-legend-dot" style="background:#d48b43"></i>MOMO / 平台</span><span><i class="ws-legend-dot" style="background:#9b6dd6"></i>團購 / 企業</span></div></section>
+ <section class="ws-panel glass"><div class="ws-panel-head"><div><h3>近 30 日營收趨勢</h3><p class="ws-muted">示意日營收 by 通路，方便看波峰波谷與配速</p></div><span class="ws-chip">30 Days</span></div><div class="wk-spark-wrap">${wkOpsSparkSvg(demo.trend)}</div><div class="ws-chart-legend"><span><i class="ws-legend-dot" style="background:#527cae"></i>官網 EC</span><span><i class="ws-legend-dot" style="background:#4d86d6"></i>門市 POS</span><span><i class="ws-legend-dot" style="background:#d48b43"></i>MOMO / 平台</span><span><i class="ws-legend-dot" style="background:#9b6dd6"></i>團購 / 企業</span></div></section>
  <section class="ws-panel glass"><div class="ws-panel-head"><div><h3>倉儲與履約今日狀態</h3><p class="ws-muted">示意數據｜營運首頁常看提醒</p></div><span class="ws-chip">Fulfillment</span></div>
  <div class="wk-warehouse-grid">
  <div class="wk-warehouse-card"><small>待揀貨</small><strong>${wkOpsFmtInt(demo.toPack)}</strong><span>14:00 前需完成</span></div>
@@ -2122,16 +2227,16 @@ function obRevenueTargetChart(rows,stat){
  const w=900,h=270,pl=58,pr=20,pt=20,pb=50,gw=w-pl-pr,gh=h-pt-pb;
  const max=Math.max(1,...points.flatMap(r=>[r.rev,r.target||0]))*1.10;
  const scale=v=>(v/max)*gh;
- const rects=points.map((r,i)=>{const slot=gw/points.length, bw=Math.max(9,Math.min(32,slot*.34)),cx=pl+slot*(i+.5),rv=scale(r.rev),tg=scale(r.target||0),labs=points.length===1?`${r.y}/${r.month}`:r.month+'月';return `<g><rect x="${cx-bw-3}" y="${pt+gh-rv}" width="${bw}" height="${rv}" rx="5" fill="#758439"><title>${labs} 實際：${wkMoney(r.rev)}</title></rect><rect x="${cx+3}" y="${pt+gh-tg}" width="${bw}" height="${tg}" rx="5" fill="#c8d2db"><title>${labs} 目標：${r.target?wkMoney(r.target):'未設定'}</title></rect><text x="${cx}" y="${h-20}" text-anchor="middle" fill="#526a7a" font-size="14">${labs}</text></g>`;}).join('');
- return `<svg class="ob-analytics-svg" viewBox="0 0 ${w} ${h}" preserveAspectRatio="xMidYMid meet">${[0,.25,.5,.75,1].map(v=>{const y=pt+gh*(1-v);return `<line x1="${pl}" x2="${w-pr}" y1="${y}" y2="${y}" stroke="#dfe7eb" stroke-dasharray="4 5"/><text x="${pl-8}" y="${y+5}" text-anchor="end" fill="#688094" font-size="13">${(max*v/1e8).toFixed(1)}億</text>`;}).join('')}${rects}</svg><div class="ob-legend"><span><i style="background:#758439"></i>營收實際</span><span><i style="background:#c8d2db"></i>營收目標</span></div>`;
+ const rects=points.map((r,i)=>{const slot=gw/points.length, bw=Math.max(9,Math.min(32,slot*.34)),cx=pl+slot*(i+.5),rv=scale(r.rev),tg=scale(r.target||0),labs=points.length===1?`${r.y}/${r.month}`:r.month+'月';return `<g><rect x="${cx-bw-3}" y="${pt+gh-rv}" width="${bw}" height="${rv}" rx="5" fill="#4b79ae"><title>${labs} 實際：${wkMoney(r.rev)}</title></rect><rect x="${cx+3}" y="${pt+gh-tg}" width="${bw}" height="${tg}" rx="5" fill="#c8d2db"><title>${labs} 目標：${r.target?wkMoney(r.target):'未設定'}</title></rect><text x="${cx}" y="${h-20}" text-anchor="middle" fill="#526a7a" font-size="14">${labs}</text></g>`;}).join('');
+ return `<svg class="ob-analytics-svg" viewBox="0 0 ${w} ${h}" preserveAspectRatio="xMidYMid meet">${[0,.25,.5,.75,1].map(v=>{const y=pt+gh*(1-v);return `<line x1="${pl}" x2="${w-pr}" y1="${y}" y2="${y}" stroke="#dfe7eb" stroke-dasharray="4 5"/><text x="${pl-8}" y="${y+5}" text-anchor="end" fill="#688094" font-size="13">${(max*v/1e8).toFixed(1)}億</text>`;}).join('')}${rects}</svg><div class="ob-legend"><span><i style="background:#4b79ae"></i>營收實際</span><span><i style="background:#c8d2db"></i>營收目標</span></div>`;
 }
 
 const OB_CH = [
-  {id:'ec',name:'官網 EC',color:'#70843a',weight:.39},
+  {id:'ec',name:'官網 EC',color:'#527cae',weight:.39},
   {id:'store',name:'門市 POS',color:'#6187c7',weight:.22},
   {id:'momo',name:'MOMO',color:'#c68851',weight:.16},
   {id:'shopee',name:'蝦皮商城',color:'#9b74b7',weight:.14},
-  {id:'b2b',name:'團購／企業',color:'#43a69a',weight:.09}
+  {id:'b2b',name:'團購／企業',color:'#b16b99',weight:.09}
 ];
 function obChMonth(row){
  // Month- and year-varying weights, reproducible with the same filters. Every month reconciles to company revenue.
@@ -2193,7 +2298,7 @@ function obStoreCompare(rows,comp){
  }return v;};
  const now=alloc(rows),good=!!comp.valid,prior=good?alloc(comp.rows):null;
  const max=Math.max(1,...now,...(prior||[]))*1.12;
- return `<section class="ob-panel" id="ops-store-compare">${obSection('門市同期營收比較','模擬各門市每月不同營收權重；切換上方比較模式後同步更新','示意門市')}<div class="ob-store-bars">${stores.map(([name],i)=>{const cur=now[i],prev=good?prior[i]:null;return `<div class="ob-store-row"><strong>${name}</strong><div class="ob-store-lines"><div><i style="width:${cur/max*100}%;background:#70843a"></i></div>${good?`<div><i style="width:${prev/max*100}%;background:#bdc8d6"></i></div>`:''}</div><div><b>${wkMoney(cur)}</b>${good?`<small>${wkDelta(cur,prev)} 比較期</small>`:'<small>未啟用比較</small>'}</div></div>`;}).join('')}</div><div class="ob-legend"><span><i style="background:#70843a"></i>觀察期</span>${good?'<span><i style="background:#bdc8d6"></i>比較期</span>':''}</div><p class="ws-val-note">六間為示意門市，金額按月度變動權重拆分 POS 通路推估營收，各店總和與門市 POS 通路一致；並非 OneBoy 門市名冊或真實單店數據。</p></section>`;
+ return `<section class="ob-panel" id="ops-store-compare">${obSection('門市同期營收比較','模擬各門市每月不同營收權重；切換上方比較模式後同步更新','示意門市')}<div class="ob-store-bars">${stores.map(([name],i)=>{const cur=now[i],prev=good?prior[i]:null;return `<div class="ob-store-row"><strong>${name}</strong><div class="ob-store-lines"><div><i style="width:${cur/max*100}%;background:#4b79ae"></i></div>${good?`<div><i style="width:${prev/max*100}%;background:#bdc8d6"></i></div>`:''}</div><div><b>${wkMoney(cur)}</b>${good?`<small>${wkDelta(cur,prev)} 比較期</small>`:'<small>未啟用比較</small>'}</div></div>`;}).join('')}</div><div class="ob-legend"><span><i style="background:#4b79ae"></i>觀察期</span>${good?'<span><i style="background:#bdc8d6"></i>比較期</span>':''}</div><p class="ws-val-note">六間為示意門市，金額按月度變動權重拆分 POS 通路推估營收，各店總和與門市 POS 通路一致；並非 OneBoy 門市名冊或真實單店數據。</p></section>`;
 }
 function obAchievementChart(stat){const p=stat.target?stat.rev/stat.target*100:0,c=Math.max(0,Math.min(100,p));return `<div class="ob-goal"><div class="ob-gauge" style="background:conic-gradient(#758439 0 ${c}%,#e7ebef ${c}% 100%)"><div><small>目標達成率</small><strong>${stat.target?wkPct(p):'未設定'}</strong></div></div><div class="ob-goal-info"><div><small>年度／期間營收</small><strong>${wkMoney(stat.rev)}</strong></div><div><small>同期間目標</small><strong>${wkMoney(stat.target)}</strong></div><div><small>${stat.rev>=stat.target?'超過目標':'距離目標'}</small><strong>${wkMoney(Math.abs(stat.rev-stat.target))}</strong></div></div></div>`;}
 function obBigDash(rows,stat,comp){return `<div class="ob-visual-stack" id="ops-charts"><section class="ob-panel ob-chart-main ob-first-chart">${obSection('營收 vs 目標｜每月對照','每月實績、目標與達成缺口：優先用圖表理解變化','原始資料')}${obRevenueTargetChart(rows,stat)}</section>
@@ -2211,7 +2316,7 @@ function obInvoiceMini(){return `<section class="ob-panel" id="ops-invoices">${o
 function obCampaignMini(){return `<section class="ob-panel" id="ops-campaigns">${obSection('Campaign｜活動回收','活動費用、營收、訂單數與成效並排','活動示意')}<div class="ob-camp-mini">${[['夏日冰感節',74,86,9.4],['秋冬機能週',91,102,7.3],['會員週年慶',59,78,8.8]].map(([n,v,top,ratio])=>`<div><strong>${n}</strong><div class="ob-campbar"><i style="width:${v}%"></i></div><small>預算執行 ${v}% · 收益／花費 ${ratio}x（示意）</small></div>`).join('')}</div><button class="ob-subtle-btn" data-action="ops-module" data-module="campaigns">查看完整活動分析 →</button></section>`;}
 function obOpsDashboard(rows,stat,comp,all){const d=wkOpsDemo(rows,stat),prior=comp.valid?wkStat(comp.rows):null;return `${obBigDash(rows,stat,comp)}<section class="ob-kpi-strip" id="ops-kpis">${[
  ['期間總營收',wkMoney(stat.rev),prior?'較比較期 '+wkDelta(stat.rev,prior.rev):'原始資料'],['訂單數',d.orderCount.toLocaleString('zh-TW'),'示意訂單'],['平均客單',wkMoney(d.aov),'示意資料'],['電商轉換率',wkPct(d.conv),'示意資料'],['退貨率',wkPct(d.returnRate),'示意資料']].map(([n,v,s])=>obStatBlock(n,v,s)).join('')}</section>
- <div class="ob-grid-half"><section class="ob-panel" id="ops-trends">${obSection('近 30 日通路營收走勢','依營收總額比例生成每日示意趨勢，對照不同銷售通路','示意資料')}<div class="wk-spark-wrap">${wkOpsSparkSvg(d.trend)}</div><div class="ob-legend"><span><i style="background:#7e8f2a"></i>官網</span><span><i style="background:#4d86d6"></i>門市</span><span><i style="background:#d48b43"></i>平台</span><span><i style="background:#9b6dd6"></i>團購</span></div></section>${obFulfillmentPanel(rows,stat)}</div>
+ <div class="ob-grid-half"><section class="ob-panel" id="ops-trends">${obSection('近 30 日通路營收走勢','依營收總額比例生成每日示意趨勢，對照不同銷售通路','示意資料')}<div class="wk-spark-wrap">${wkOpsSparkSvg(d.trend)}</div><div class="ob-legend"><span><i style="background:#527cae"></i>官網</span><span><i style="background:#4d86d6"></i>門市</span><span><i style="background:#d48b43"></i>平台</span><span><i style="background:#9b6dd6"></i>團購</span></div></section>${obFulfillmentPanel(rows,stat)}</div>
  <div class="ob-grid-half">${obProductsMini()}${obInvoiceMini()}</div>${obCampaignMini()}
  <section class="ob-panel" id="ops-compare">${obSection('同期比較與逐月明細','年度、半年、季度或自訂區間的原始收益／花費逐月對照')}${wkComparisonHtml(rows,comp,true)}${wkPeriodCompareTable(rows,comp,'operations')}</section>
  <section class="ob-panel" id="ops-county">${obSection('全台 22 縣市完整績效明細','多選區域與縣市、點擊表頭排序；花蓮列中區','分配示意')}<div class="ws-filter-row">${wkOpsMulti('region')}${wkOpsMulti('county')}</div>${wkCountyTable(all,comp.valid?comp.rows:null,stat.rev)}</section>
@@ -2271,7 +2376,7 @@ function v17RevenueChart(rows,stat,comp){
  const axis=[0,.25,.5,.75,1].map(t=>{const y=yy(peak*t);return `<line x1="${L}" x2="${w-R}" y1="${y}" y2="${y}" stroke="#e4eaf1" stroke-dasharray="5 6"/><text x="${L-12}" y="${y+5}" text-anchor="end" fill="#6f8090" font-size="14">${(peak*t/1e8).toFixed(1)}億</text>`;}).join('');
  let line=[],bars='';
  rows.forEach((r,i)=>{const x=L+slot*(i+.5),rw=good?25:30,tg=r.target||0,lab=n>12?`${r.y}/${String(r.month).padStart(2,'0')}`:`${r.month}月`,prior=good?comp.rows[i]:null;
-  bars+=`<g><rect x="${x-rw-3}" y="${yy(r.rev)}" width="${rw}" height="${Math.max(1,base-yy(r.rev))}" rx="4" fill="#6b822f"><title>${r.key} 實際營收：${wkMoney(r.rev)}</title></rect>${r.target!==null?`<rect x="${x+3}" y="${yy(tg)}" width="${rw}" height="${Math.max(1,base-yy(tg))}" rx="4" fill="#ced7dd"><title>${r.key} 營收目標：${wkMoney(tg)}</title></rect>`:''}<text x="${x}" y="${h-14}" text-anchor="middle" fill="#64788b" font-size="14">${lab}</text></g>`;
+  bars+=`<g><rect x="${x-rw-3}" y="${yy(r.rev)}" width="${rw}" height="${Math.max(1,base-yy(r.rev))}" rx="4" fill="#4b79ae"><title>${r.key} 實際營收：${wkMoney(r.rev)}</title></rect>${r.target!==null?`<rect x="${x+3}" y="${yy(tg)}" width="${rw}" height="${Math.max(1,base-yy(tg))}" rx="4" fill="#ced7dd"><title>${r.key} 營收目標：${wkMoney(tg)}</title></rect>`:''}<text x="${x}" y="${h-14}" text-anchor="middle" fill="#64788b" font-size="14">${lab}</text></g>`;
   if(good)line.push([x,yy(prior.rev),prior]);
  });
  const path=good?`<path d="${line.map((p,i)=>`${i?'L':'M'}${p[0].toFixed(1)} ${p[1].toFixed(1)}`).join(' ')}" fill="none" stroke="#d88c51" stroke-width="3.5" stroke-dasharray="7 4"/>${line.map(p=>`<circle cx="${p[0]}" cy="${p[1]}" r="4.2" fill="#d88c51" stroke="#fff" stroke-width="1.5"><title>${p[2].key} 同期營收：${wkMoney(p[2].rev)}</title></circle>`).join('')}`:'';
@@ -2281,7 +2386,7 @@ function v17RevenueChart(rows,stat,comp){
  return `<section class="v17-panel v17-revenue" id="ops-revenue"><div class="v17-panel-head"><div><div class="v17-overline">01 / REVENUE PERFORMANCE</div><h3>每月營收與目標對照</h3><p>同一張圖看實績、目標及同期差異</p></div><span class="v17-source-tag">實際月度資料</span></div>
 
  <div class="v17-svg-scroll"><svg viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" role="img" aria-label="每月營收柱狀與目標柱狀，${good?'橘色虛線為比較期營收':'未啟用比較期'}">${axis}${bars}${path}</svg></div>
- <div class="v17-legend"><span><i style="background:#6b822f"></i>觀察期營收</span><span><i style="background:#ced7dd"></i>同期目標</span>${good?`<span><i class="v17-dash" style="background:#d88c51"></i>${comp.label}營收（虛線）</span>`:''}</div>
+ <div class="v17-legend"><span><i style="background:#4b79ae"></i>觀察期營收</span><span><i style="background:#ced7dd"></i>同期目標</span>${good?`<span><i class="v17-dash" style="background:#d88c51"></i>${comp.label}營收（虛線）</span>`:''}</div>
  <div class="v17-revenue-stats"><div><small>觀察期營收</small><strong>${wkMoney(stat.rev)}</strong></div><div><small>營收目標</small><strong>${stat.target?wkMoney(stat.target):'未設定'}</strong></div><div><small>目標達成率</small><strong class="${ach!==null&&ach>=100?'v17-positive':''}">${ach===null?'—':wkPct(ach)}</strong></div><div><small>目標差額</small><strong class="${gap<0?'v17-negative':'v17-positive'}">${stat.target?`${gap<0?'−':'+'}${wkMoney(Math.abs(gap))}`:'—'}</strong></div>${good?`<div><small>${comp.label}變動</small><strong class="${stat.rev<prev.rev?'v17-negative':'v17-positive'}">${wkDelta(stat.rev,prev.rev)}</strong></div>`:''}</div></section>`;
 }
 function v17ChannelDonut(rows,stat,comp){
@@ -2303,7 +2408,7 @@ function v17ChannelsMonthly(rows,comp){
  return `<section class="v17-panel" id="ops-channel-month"><div class="v17-panel-head"><div><div class="v17-overline">03 / MONTHLY CHANNEL TREND</div><h3>各通路逐月營收</h3><p>每一根長條都是當月通路營收構成</p></div><span class="v17-source-tag demo">通路示意</span></div><div class="v17-channel-summary"><b>${label}</b>　${wkMoney(vSum)} <span>${good?'深色是觀察期／淡色是比較期':'開啟比較後可看到同期長條'}</span></div>
  <div class="v17-svg-scroll"><svg viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" role="img" aria-label="各通路逐月營收堆疊長條圖">${ticks}${bars}</svg></div><div class="v17-legend">${OB_CH.map(c=>`<span style="opacity:${focus==='all'||focus===c.id?1:.45}"><i style="background:${c.color}"></i>${c.name}</span>`).join('')}</div><p class="v17-caption">選通路會淡化其他通路；每月加總仍等於當月總營收。與左側圓餅圖使用相同的示意拆分。</p></section>`;
 }
-function v17Region(rows,stat){const groups=['北區','中區','南區','離島'];const all=wkCountyStats(rows),colors=['#70843a','#5f86c5','#d29155','#a687c4'];const values=groups.map(g=>all.filter(c=>wkRegionFor(c.id)===g).reduce((a,c)=>a+c.rev,0));
+function v17Region(rows,stat){const groups=['北區','中區','南區','離島'];const all=wkCountyStats(rows),colors=['#4b79ae','#5f86c5','#d29155','#a687c4'];const values=groups.map(g=>all.filter(c=>wkRegionFor(c.id)===g).reduce((a,c)=>a+c.rev,0));
  return `<section class="v17-panel" id="ops-region"><div class="v17-panel-head"><div><h3>區域營收分布</h3><p>北・中・南・離島｜觀察期</p></div><span class="v17-source-tag demo">縣市示意</span></div><div class="v17-region-track">${values.map((v,i)=>`<span style="width:${stat.rev?v/stat.rev*100:0}%;background:${colors[i]}" title="${groups[i]} ${wkMoney(v)}"></span>`).join('')}</div><div class="v17-regions">${groups.map((g,i)=>`<div><span><i style="background:${colors[i]}"></i>${g}</span><b>${wkPct(stat.rev?values[i]/stat.rev*100:0)}</b><small>${wkMoney(values[i])}</small></div>`).join('')}</div></section>`;
 }
 function v17OpsDashboard(rows,stat,comp,all){const d=wkOpsDemo(rows,stat);
@@ -2349,7 +2454,7 @@ function obShippingPanels(){const list=obShipList();return `<section class="ob-p
 function renderShippingWorkspace(){const all=obEnsureData(),shippable=all.filter(x=>!['已取消','退貨中'].includes(x.status)),road=shippable.filter(x=>x.status==='配送中').length,packing=shippable.filter(x=>x.status==='已包裝'||x.status==='揀貨中').length,delivered=shippable.filter(x=>x.status==='已送達').length,waiting=shippable.filter(x=>x.status==='待出貨').length,den=Math.max(1,shippable.length),vPack=(waiting+packing)/den*100,vRoad=road/den*100,vDelivered=delivered/den*100;return `<div class="workspace-shell ob-workspace">${wkFloatNav('shipping',[['ship-scope','資料口徑'],['ship-kpis','物流概況'],['ship-list','配送清單'],['ship-actions','今日待辦']])}${obTopline('Shipping｜物流配送中心','參考 Shipment 範例：快遞商、配送狀態、進度軸與預計送達時間','示意物流作業')}
  ${v18SnapshotScope('物流資料','2026/11 · 固定示意樣本','尚無第二期，不提供同比','物流 KPI 為全部示意出貨；狀態／搜尋條件只過濾下方配送清單。','無即時物流 API')}
  <section class="ob-panel" id="ship-kpis">${obSection('履約流程與配送績效','從待揀貨一路到已送達，狀態分布與數字同步呈現','當日示意')}
- <div class="ob-ship-segments"><span style="width:${vPack}%;background:#d0ab70" title="倉儲處理 ${waiting+packing} 件"></span><span style="width:${vRoad}%;background:#6a8fb9" title="配送中 ${road} 件"></span><span style="width:${vDelivered}%;background:#748739" title="已簽收 ${delivered} 件"></span></div> <div class="ob-legend"><span><i style="background:#d0ab70"></i>倉儲處理</span><span><i style="background:#6a8fb9"></i>在途配送</span><span><i style="background:#748739"></i>已簽收</span></div><div class="ob-shipping-kpis">${obStatBlock('配送中',road,'在途物流','olive')}${obStatBlock('已揀／已包裝',packing,'待交接承運商')}${obStatBlock('已送達',delivered,'累計完成')}${obStatBlock('門到門時效','2.6 天','示意平均配送日數')}</div></section>
+ <div class="ob-ship-segments"><span style="width:${vPack}%;background:#d0ab70" title="倉儲處理 ${waiting+packing} 件"></span><span style="width:${vRoad}%;background:#6a8fb9" title="配送中 ${road} 件"></span><span style="width:${vDelivered}%;background:#618eb6" title="已簽收 ${delivered} 件"></span></div> <div class="ob-legend"><span><i style="background:#d0ab70"></i>倉儲處理</span><span><i style="background:#6a8fb9"></i>在途配送</span><span><i style="background:#618eb6"></i>已簽收</span></div><div class="ob-shipping-kpis">${obStatBlock('配送中',road,'在途物流','olive')}${obStatBlock('已揀／已包裝',packing,'待交接承運商')}${obStatBlock('已送達',delivered,'累計完成')}${obStatBlock('門到門時效','2.6 天','示意平均配送日數')}</div></section>
  ${obShippingPanels()}
  <section class="ob-panel" id="ship-actions">${obSection('今日物流待辦','出貨批次、異常包裹與待簽收客訴','操作示意')}<div class="ob-action-list"><div><span class="ob-dot amber"></span><b>每日打包清單</b><span>${packing} 件待處理，下午 2:00 集貨前完成</span><button data-action="goto-page" data-page="orders">開啟訂單</button></div><div><span class="ob-dot blue"></span><b>異常追蹤</b><span>遇配送延誤應通知客服並更新預計送達</span><button data-action="ship-filter" data-status="road">查看在途</button></div></div></section>
  <div class="ob-source-note">※ 承運商、物流單號、顧客、包裹進度與 ETA 均為示意；正式上線須串接物流 API／WMS／OMS，才能顯示即時配送。</div></div>`;}
@@ -2469,13 +2574,13 @@ function ob19KPI(rows,comp){const a=ob19Totals(rows),b=comp.valid?ob19Totals(com
 }
 function ob19AnnualCompare(){const f=S.filters.marketing;const ylist=['2023','2024','2025'];const fixed=true;const costs=OB19_NAMES.map(name=>({name,group:OB19_GROUP_MAP[name]||'其他 / 待分類',byYear:Object.fromEntries(ylist.map(y=>[y,ob19Row(y,name)?.months.reduce((a,b)=>a+(Number(b)||0),0)||0]))}));let shown=costs.filter(r=>ob19State.group==='all'||r.group===ob19State.group).filter(r=>!ob19State.query||r.name.toLowerCase().includes(ob19State.query.toLowerCase()));let val=r=>ob19State.sort==='name'?r.name:(r.byYear[ob19State.sort]||0);shown.sort((a,b)=>ob19State.sort==='name'?a.name.localeCompare(b.name,'zh-Hant')*(ob19State.desc?-1:1):((val(b)-val(a))*(ob19State.desc?1:-1)));
  const yr=(v)=>v===0?'—':ob19Money(v),delta=(v,b)=>b===0?v===0?'—':'新增':ob19Pct((v/b-1)*100);
- return `<section class="ws-panel glass" id="ob19-annual"><div class="ws-panel-head"><div><h3>2023–2025 全成本科目逐年比較</h3><p class="ws-muted">固定比較三個完整年度（不受上方觀察期間影響），保留來源科目名稱，點擊表格列下鑽</p></div><span class="ws-chip">${shown.length} / ${OB19_NAMES.length} 科目</span></div><div class="ob19-controls"><label>管理分類 <select id="ob19Group"><option value="all">全部來源科目</option>${OB19_GROUPS.map(([g])=>`<option value="${ob19Esc(g)}" ${ob19State.group===g?'selected':''}>${ob19Esc(g)}</option>`).join('')}</select></label><label>來源科目搜尋 <input type="search" id="ob19Search" placeholder="FB、TikTok、LINE、TVC、製作費…" value="${ob19Esc(ob19State.query)}"></label><label>排序 <select id="ob19Sort">${[['2025','2025 年花費'],['2024','2024 年花費'],['2023','2023 年花費'],['name','來源名稱']].map(([k,n])=>`<option value="${k}" ${ob19State.sort===k?'selected':''}>${n}</option>`).join('')}</select></label></div><div class="ws-table-wrap ob19-scroll"><table class="ws-data-table ob19-cost-table"><thead><tr><th>原始 Excel 科目</th><th>管理分類（建議）</th><th>2023</th><th>2024</th><th>2024 年增減金額</th><th>2024 YoY</th><th>2025</th><th>2025 年增減金額</th><th>2025 YoY</th></tr></thead><tbody>${shown.map(z=>`<tr data-action="ob19-focus" data-name="${encodeURIComponent(z.name)}" class="${ob19State.focus===z.name?'ob19-picked':''}"><td><b>▸ ${ob19Esc(z.name)}</b></td><td>${ob19Esc(z.group)}</td><td>${yr(z.byYear[2023])}</td><td>${yr(z.byYear[2024])}</td><td>${ob19Sign(z.byYear[2024]-z.byYear[2023])}</td><td>${delta(z.byYear[2024],z.byYear[2023])}</td><td>${yr(z.byYear[2025])}</td><td>${ob19Sign(z.byYear[2025]-z.byYear[2024])}</td><td>${delta(z.byYear[2025],z.byYear[2024])}</td></tr>`).join('')}</tbody></table></div><div class="ob19-note">來源欄位為原始 Excel 文字，管理分類是本版為分析提出的歸類，可再依 OneBoy 的會計科目與投放合約調整。未填值顯示「—」，不代表已確認實際支出為 0。</div></section>`;
+ return `<section class="ws-panel glass" id="ob19-annual"><div class="ws-panel-head"><div><h3>2023–2025 全成本科目逐年比較</h3><p class="ws-muted">固定比較三個完整年度（不受上方觀察期間影響），保留來源科目名稱，點擊表格列下鑽</p></div><span class="ws-chip">${shown.length} / ${OB19_NAMES.length} 科目</span></div><div class="ob19-controls"><label>管理分類 <select id="ob19Group"><option value="all">全部來源科目</option>${OB19_GROUPS.map(([g])=>`<option value="${ob19Esc(g)}" ${ob19State.group===g?'selected':''}>${ob19Esc(g)}</option>`).join('')}</select></label><label>來源科目搜尋 <input type="search" id="ob19Search" placeholder="FB、TikTok、LINE、TVC、製作費…" value="${ob19Esc(ob19State.query)}"></label><label>排序 <select id="ob19Sort">${[['2025','2025 年花費'],['2024','2024 年花費'],['2023','2023 年花費'],['name','來源名稱']].map(([k,n])=>`<option value="${k}" ${ob19State.sort===k?'selected':''}>${n}</option>`).join('')}</select></label></div><div class="ws-table-wrap ob19-scroll"><table class="ws-data-table ob19-cost-table"><thead><tr><th>原始 Excel 科目</th><th>管理分類（建議）</th><th>2023</th><th>2024</th><th>2024 年增減金額</th><th>2024 YoY</th><th>2025</th><th>2025 年增減金額</th><th>2025 YoY</th></tr></thead><tbody>${shown.map(z=>`<tr data-action="ob19-focus" data-name="${encodeURIComponent(z.name)}" class="${ob19State.focus===z.name?'ob19-picked':''}"><td><b>▸ ${ob19Esc(z.name)}</b></td><td>${ob19Esc(z.group)}</td><td>${yr(z.byYear[2023])}</td><td>${yr(z.byYear[2024])}</td><td>${ob19Sign(z.byYear[2024]-z.byYear[2023])}</td><td>${ob21Trend(z.byYear[2024],z.byYear[2023])}</td><td>${yr(z.byYear[2025])}</td><td>${ob19Sign(z.byYear[2025]-z.byYear[2024])}</td><td>${ob21Trend(z.byYear[2025],z.byYear[2024])}</td></tr>`).join('')}</tbody></table></div><div class="ob19-note">來源欄位為原始 Excel 文字，管理分類是本版為分析提出的歸類，可再依 OneBoy 的會計科目與投放合約調整。未填值顯示「—」，不代表已確認實際支出為 0。</div></section>`;
 }
 function ob19FocusChart(name){const colors=['#6983b6','#71b4a6','#d5a15d'],years=['2023','2024','2025'], w=900,h=225,left=50,top=23,base=h-30,plot=base-top;const vals=years.flatMap(y=>ob19Row(y,name)?.months.filter(Number.isFinite)||[]);const max=Math.max(...vals,1);let svg=`<svg width="900" height="225" viewBox="0 0 900 225" role="img" aria-label="${ob19Esc(name)} 三年各月費用變化">`;
  for(let k=0;k<=4;k++){const vv=max*k/4;const Y=base-vv/max*plot;svg+=`<line x1="${left}" y1="${Y}" x2="880" y2="${Y}" stroke="#e0ebf2"/><text x="43" y="${Y+4}" font-size="11" fill="#6a8299" text-anchor="end">${ob19Esc(ob19Short(vv))}</text>`;}
  years.forEach((y,j)=>{const it=ob19Row(y,name);if(!it)return;let path='';it.months.forEach((v,i)=>{if(!Number.isFinite(v))return;const X=left+34+i*71.1,Y=base-v/max*plot;path+=(path?' L':'M')+X+' '+Y;svg+=`<circle cx="${X}" cy="${Y}" r="3.5" fill="${colors[j]}"><title>${y}/${i+1} ${ob19Money(v)}</title></circle>`;});svg+=`<path d="${path}" stroke="${colors[j]}" stroke-width="2.8" fill="none"/>`;});for(let i=0;i<12;i++)svg+=`<text x="${left+34+i*71.1}" y="${h-10}" font-size="12" text-anchor="middle" fill="#59778f">${i+1}月</text>`;svg+='</svg>';return `<div class="ob19-chart-scroll">${svg}</div><div class="ob19-linelegend">${years.map((y,i)=>`<span><i style="background:${colors[i]}"></i>${y}</span>`).join('')}</div>`;
 }
-function ob19DrillDown(){const n=ob19State.focus,by=Object.fromEntries(['2023','2024','2025'].map(y=>[y,ob19Row(y,n)?.months.reduce((a,v)=>a+(Number(v)||0),0)||0]));const cur=by['2025'],prev=by['2024'];return `<section class="ws-panel glass" id="ob19-drill"><div class="ws-panel-head"><div><h3>單一科目下鑽｜${ob19Esc(n)}</h3><p class="ws-muted">3 年月度走勢、年度成本與同期差額，來源 Excel 原始列</p></div><span class="ws-chip">${ob19Esc(OB19_GROUP_MAP[n]||'未分類')}</span></div>${ob19FocusChart(n)}<div class="ob19-kpis three">${['2023','2024','2025'].map(y=>`<div class="ob19-kpi"><small>${y} 年費用</small><b>${ob19Money(by[y])}</b><span>${y==='2023'?'比較基準':`${ob19Sign(by[y]-by[String(+y-1)])}｜${by[String(+y-1)]>0?ob19Pct((by[y]/by[String(+y-1)]-1)*100):'基期未填／為 0'}`}</span></div>`).join('')}</div><div class="ob19-note">平台營收與真實 ROAS 無法從費用表計算。可在右下「個別投放收益試算」輸入歸因營收，再檢查是否達到目標 ROAS。</div></section>`;}
+function ob19DrillDown(){const n=ob19State.focus,by=Object.fromEntries(['2023','2024','2025'].map(y=>[y,ob19Row(y,n)?.months.reduce((a,v)=>a+(Number(v)||0),0)||0]));const cur=by['2025'],prev=by['2024'];return `<section class="ws-panel glass" id="ob19-drill"><div class="ws-panel-head"><div><h3>單一科目下鑽｜${ob19Esc(n)}</h3><p class="ws-muted">3 年月度走勢、年度成本與同期差額，來源 Excel 原始列</p></div><span class="ws-chip">${ob19Esc(OB19_GROUP_MAP[n]||'未分類')}</span></div>${ob19FocusChart(n)}<div class="ob19-kpis three">${['2023','2024','2025'].map(y=>`<div class="ob19-kpi"><small>${y} 年費用</small><b>${ob19Money(by[y])}</b><span>${y==='2023'?'比較基準':`${ob19Sign(by[y]-by[String(+y-1)])}｜${ob21Trend(by[y],by[String(+y-1)])}`}</span></div>`).join('')}</div><div class="ob19-note">平台營收與真實 ROAS 無法從費用表計算。可在右下「個別投放收益試算」輸入歸因營收，再檢查是否達到目標 ROAS。</div></section>`;}
 function ob19MonthlyMatrix(){const y=ob19State.matrixYear,groups=OB19_RAW[y].items,costs=groups.filter(z=>ob19State.group==='all'||(OB19_GROUP_MAP[z.name]||'其他 / 待分類')===ob19State.group),has=(v)=>Number.isFinite(v);const allCosts=Array.from({length:12},(_,i)=>groups.reduce((s,a)=>s+(Number(a.months[i])||0),0)),spend=OB19_RAW[y].spend;
  return `<section class="ws-panel glass" id="ob19-monthly"><div class="ws-panel-head"><div><h3>原始 Excel｜逐月完整科目矩陣</h3><p class="ws-muted">檢查每個科目 1–12 月金額，所有來源列均完整保留</p></div><select id="ob19MatrixYear">${['2023','2024','2025'].map(v=>`<option ${v===y?'selected':''}>${v}</option>`).join('')}</select></div><div class="ws-table-wrap ob19-scroll"><table class="ws-data-table ob19-cost-table"><thead><tr><th>來源科目</th>${Array.from({length:12},(_,i)=>`<th>${i+1} 月</th>`).join('')}<th>全年合計</th></tr></thead><tbody><tr class="ob19-strong"><td>總花費（Excel）</td>${spend.map(v=>`<td>${ob19Money(v)}</td>`).join('')}<td>${ob19Money(spend.reduce((a,b)=>a+b,0))}</td></tr>${costs.map(it=>`<tr data-action="ob19-focus" data-name="${encodeURIComponent(it.name)}"><td><b>▸ ${ob19Esc(it.name)}</b></td>${it.months.map(v=>`<td>${has(v)?ob19Money(v):'—'}</td>`).join('')}<td>${ob19Money(it.months.reduce((a,v)=>a+(Number(v)||0),0))}</td></tr>`).join('')}</tbody><tfoot><tr><th>全部明細加總</th>${allCosts.map(v=>`<th>${ob19Money(v)}</th>`).join('')}<th>${ob19Money(allCosts.reduce((a,b)=>a+b,0))}</th></tr><tr><th>差額（總花費 − 明細）</th>${allCosts.map((v,i)=>`<th class="${Math.abs(spend[i]-v)>1?'ob19-diff':''}">${ob19Sign(spend[i]-v)}</th>`).join('')}<th class="ob19-diff">${ob19Sign(spend.reduce((a,b)=>a+b,0)-allCosts.reduce((a,b)=>a+b,0))}</th></tr></tfoot></table></div></section>`;}
 function ob19Reconcile(){const yearData=['2023','2024','2025'].map(y=>{const v=OB19_RAW[y],det=v.items.reduce((a,z)=>a+z.months.reduce((b,c)=>b+(Number(c)||0),0),0),sp=v.spend.reduce((a,b)=>a+b,0);return {y,sp,det,diff:sp-det};});let rows=[];for(const y of ['2023','2024','2025']){const v=OB19_RAW[y];for(let i=0;i<12;i++){const det=v.items.reduce((a,r)=>a+(Number(r.months[i])||0),0),sp=v.spend[i],d=sp-det;if(Math.abs(d)>1)rows.push({y,m:i+1,sp,det,d});}}
@@ -2520,13 +2625,14 @@ function ob19LensCost(y, lens, idxs){return lens[2].reduce((a,g)=>a+ob19GroupCos
 function ob19ChartMonths(){
  const years=['2023','2024','2025'], keys=[['spend','行銷總花費'],['rev','全公司總收益'],['target','全公司營收目標'],['focus','指定來源科目成本']];
  const metric=ob19State.yoyMetric||'spend', selectedName=ob19State.focus;
- const vals=years.map(y=>Array.from({length:12},(_,i)=>metric==='focus'?(ob19Row(y,selectedName)?.months[i]||0):(OB19_RAW[y][metric][i]||0)));
+ const original=years.map(y=>Array.from({length:12},(_,i)=>metric==='focus'?ob19Row(y,selectedName)?.months[i]:OB19_RAW[y][metric][i]));
+ const vals=original.map(ar=>ar.map(v=>Number.isFinite(v)?v:0));
  const max=Math.max(1,...vals.flat()), width=1100, height=305,top=33,base=260,left=50,group=(width-left-18)/12,bw=group/3;
  let svg=`<svg viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" role="img" aria-label="2023、2024、2025 年逐月同月比較">`;
  for(let j=0;j<5;j++){const v=max*j/4,y=base-(v/max)*(base-top);svg+=`<line x1="${left}" y1="${y}" x2="${width-10}" y2="${y}" stroke="#e2ecf4"/><text x="${left-7}" y="${y+4}" text-anchor="end" font-size="11" fill="#667f94">${ob19Short(v)}</text>`;}
- for(let i=0;i<12;i++){for(let j=0;j<3;j++){const v=vals[j][i],y=base-v/max*(base-top);svg+=`<rect x="${(left+group*i+bw*j+2).toFixed(1)}" y="${y.toFixed(1)}" width="${(bw-4).toFixed(1)}" height="${(base-y).toFixed(1)}" rx="3" fill="${['#6c90cc','#69afa8','#dfaa65'][j]}"><title>${years[j]} 年 ${i+1} 月｜${ob19Money(v)}</title></rect>`;}svg+=`<text x="${left+group*(i+0.5)}" y="${height-22}" text-anchor="middle" font-size="12" fill="#55738b">${i+1} 月</text>`;}
+ for(let i=0;i<12;i++){for(let j=0;j<3;j++){const v=vals[j][i],y=base-v/max*(base-top);if(!Number.isFinite(original[j][i])){svg+=`<g><rect x="${(left+group*i+bw*j+3).toFixed(1)}" y="${base-14}" width="${(bw-6).toFixed(1)}" height="14" fill="#e9edf3" stroke="#a0acb7" stroke-dasharray="3 2"/><title>${years[j]} ${i+1} 月：來源未填</title></g>`;continue;}svg+=`<rect x="${(left+group*i+bw*j+2).toFixed(1)}" y="${y.toFixed(1)}" width="${(bw-4).toFixed(1)}" height="${(base-y).toFixed(1)}" rx="3" fill="${['#6c90cc','#69afa8','#dfaa65'][j]}"><title>${years[j]} 年 ${i+1} 月｜${ob19Money(v)}</title></rect>`;}svg+=`<text x="${left+group*(i+0.5)}" y="${height-22}" text-anchor="middle" font-size="12" fill="#55738b">${i+1} 月</text>`;}
  svg+='</svg>';
- const rows=Array.from({length:12},(_,i)=>{const a=vals.map(x=>x[i]);let yoy=(c,b)=>b?ob19Pct((c/b-1)*100):'—';return `<tr><td>${i+1} 月</td>${a.map(v=>`<td>${ob19Money(v)}</td>`).join('')}<td>${yoy(a[1],a[0])}</td><td>${yoy(a[2],a[1])}</td></tr>`;}).join('');
+ const rows=Array.from({length:12},(_,i)=>{const a=vals.map(x=>x[i]);return `<tr><td>${i+1} 月</td>${a.map((v,j)=>`<td>${Number.isFinite(original[j][i])?ob19Money(v):'<span class=\"ob21-missing\">未填</span>'}</td>`).join('')}<td>${Number.isFinite(original[0][i])&&Number.isFinite(original[1][i])?ob21Trend(a[1],a[0]):'—'}</td><td>${Number.isFinite(original[1][i])&&Number.isFinite(original[2][i])?ob21Trend(a[2],a[1]):'—'}</td></tr>`;}).join('');
  return `<section class="ws-panel glass" id="ob19-month-compare"><div class="ws-panel-head"><div><h3>同月份跨年比較｜2023 vs 2024 vs 2025</h3><p class="ws-muted">三年度 1～12 月直接並排；切換「總花費／收益／營收目標／目前選取的成本科目」</p></div><span class="ws-chip">固定比較三年</span></div><div class="ob19-controls"><label>比較指標<select id="ob19YoyMetric">${keys.map(([k,v])=>`<option value="${k}" ${metric===k?'selected':''}>${v}</option>`).join('')}</select></label>${metric==='focus'?`<span class="ob19-note">成本科目：${ob19Esc(selectedName)}（可在跨年科目表點選其他項目）</span>`:''}</div><div class="ob19-chart-scroll">${svg}</div><div class="ob19-linelegend"><span><i style="background:#6c90cc"></i>2023</span><span><i style="background:#69afa8"></i>2024</span><span><i style="background:#dfaa65"></i>2025</span></div><div class="ws-table-wrap ob19-small-scroll"><table class="ws-data-table"><thead><tr><th>月份</th><th>2023</th><th>2024</th><th>2025</th><th>2024 YoY</th><th>2025 YoY</th></tr></thead><tbody>${rows}</tbody></table></div></section>`;
 }
 function ob19QuarterCompare(){
@@ -2535,12 +2641,12 @@ function ob19QuarterCompare(){
  const max=Math.max(1,...sums.flat());const w=880,h=280,left=60,top=30,base=235,group=194,bw=54;let svg=`<svg viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" aria-label="四季度三年同比柱狀圖">`;
  for(let i=0;i<=4;i++){const v=max*i/4,y=base-(v/max)*(base-top);svg+=`<line x1="${left}" y1="${y}" x2="${w-10}" y2="${y}" stroke="#e1ecf2"/><text x="${left-7}" y="${y+4}" font-size="11" text-anchor="end" fill="#637f96">${ob19Short(v)}</text>`;}
  for(let i=0;i<4;i++){years.forEach((y,j)=>{const v=sums[j][i],x=left+30+i*group+j*bw,yy=base-v/max*(base-top);svg+=`<rect x="${x}" y="${yy}" width="${bw-5}" height="${base-yy}" rx="4" fill="${['#6c90cc','#69afa8','#dfaa65'][j]}"><title>${y} Q${i+1} ${ob19Money(v)}</title></rect>`;});svg+=`<text x="${left+30+i*group+bw*1.5}" y="${h-18}" text-anchor="middle" fill="#536f86" font-size="13">第 ${i+1} 季</text>`;}
- svg+='</svg>';const yoy=(c,b)=>b?ob19Pct((c/b-1)*100):'—';return `<section class="ws-panel glass" id="ob19-quarter"><div class="ws-panel-head"><div><h3>季度營收／投放費用｜三年同期比較</h3><p class="ws-muted">每季 3 個月份加總；營收目標缺值的 2023 Q2／Q3 僅加總已填月份，非完整季度目標</p></div><label class="ob19-inline">比較指標 <select id="ob19QuarterMetric">${options.map(([v,label])=>`<option value="${v}" ${k===v?'selected':''}>${label}</option>`).join('')}</select></label></div><div class="ob19-chart-scroll">${svg}</div><div class="ws-table-wrap"><table class="ws-data-table"><thead><tr><th>季度</th><th>2023</th><th>2024</th><th>2025</th><th>2024 YoY</th><th>2025 YoY</th></tr></thead><tbody>${q.map((_,i)=>`<tr><td>Q${i+1}</td>${sums.map(a=>`<td>${ob19Money(a[i])}</td>`).join('')}<td>${yoy(sums[1][i],sums[0][i])}</td><td>${yoy(sums[2][i],sums[1][i])}</td></tr>`).join('')}</tbody></table></div></section>`;}
+ svg+='</svg>';const yoy=(c,b)=>b?ob19Pct((c/b-1)*100):'—';return `<section class="ws-panel glass" id="ob19-quarter"><div class="ws-panel-head"><div><h3>季度營收／投放費用｜三年同期比較</h3><p class="ws-muted">每季 3 個月份加總；營收目標缺值的 2023 Q2／Q3 僅加總已填月份，非完整季度目標</p></div><label class="ob19-inline">比較指標 <select id="ob19QuarterMetric">${options.map(([v,label])=>`<option value="${v}" ${k===v?'selected':''}>${label}</option>`).join('')}</select></label></div><div class="ob19-chart-scroll">${svg}</div><div class="ws-table-wrap"><table class="ws-data-table"><thead><tr><th>季度</th><th>2023</th><th>2024</th><th>2025</th><th>2024 YoY</th><th>2025 YoY</th></tr></thead><tbody>${q.map((_,i)=>`<tr><td>Q${i+1}</td>${sums.map(a=>`<td>${ob19Money(a[i])}</td>`).join('')}<td>${ob21Trend(sums[1][i],sums[0][i])}</td><td>${ob21Trend(sums[2][i],sums[1][i])}</td></tr>`).join('')}</tbody></table></div></section>`;}
 function ob19LensPanel(){
  const lens=ob19State.lens||'channel', options=OB19_LENSES[lens],idx=Array.from({length:12},(_,i)=>i),totals=Object.fromEntries(['2023','2024','2025'].map(y=>[y,options.map(group=>ob19LensCost(y,group,idx))]));
  const max=Math.max(1,...Object.values(totals).flat());
  const labelMap={channel:'接觸型態：線上／實體／合作／支援',medium:'媒介與行銷費用性質'};
- const rows=options.map((o,i)=>{const values=['2023','2024','2025'].map(y=>totals[y][i]),yoy=(a,b)=>b?ob19Pct((a/b-1)*100):'—';return `<tr><td><i class="ob19-dot" style="background:${o[1]}"></i>${ob19Esc(o[0])}</td>${values.map(v=>`<td>${ob19Money(v)}</td>`).join('')}<td>${yoy(values[1],values[0])}</td><td>${yoy(values[2],values[1])}</td></tr>`;}).join('');
+ const rows=options.map((o,i)=>{const values=['2023','2024','2025'].map(y=>totals[y][i]),yoy=(a,b)=>b?ob19Pct((a/b-1)*100):'—';return `<tr><td><i class="ob19-dot" style="background:${o[1]}"></i>${ob19Esc(o[0])}</td>${values.map(v=>`<td>${ob19Money(v)}</td>`).join('')}<td>${ob21Trend(values[1],values[0])}</td><td>${ob21Trend(values[2],values[1])}</td></tr>`;}).join('');
  const bars=['2023','2024','2025'].map(y=>{const sum=totals[y].reduce((a,b)=>a+b,0);return `<div class="ob19-lens-year"><b>${y} 年</b><div class="ob19-lens-stacked">${options.map((o,i)=>`<div style="width:${sum?totals[y][i]/sum*100:0}%;background:${o[1]}" title="${y} ${o[0]} ${ob19Money(totals[y][i])}"></div>`).join('')}</div><small>明細分類加總 ${ob19Money(sum)}</small></div>`;}).join('');
  return `<section class="ws-panel glass" id="ob19-lens"><div class="ws-panel-head"><div><h3>多維度投放觀察｜相同成本，不同管理視角</h3><p class="ws-muted">可切換實體／數位通路視角、媒介平台／費用性質；每筆來源僅計入一種分類，避免雙重計算</p></div><label class="ob19-inline">分析維度 <select id="ob19Lens">${Object.entries(labelMap).map(([k,v])=>`<option value="${k}" ${lens===k?'selected':''}>${v}</option>`).join('')}</select></label></div><div class="ob19-lens-bars">${bars}</div><div class="ob19-lens-legend">${options.map((o,i)=>`<span><i style="background:${o[1]}"></i>${ob19Esc(o[0])}</span>`).join('')}</div><div class="ws-table-wrap"><table class="ws-data-table"><thead><tr><th>費用性質</th><th>2023</th><th>2024</th><th>2025</th><th>2024 YoY</th><th>2025 YoY</th></tr></thead><tbody>${rows}</tbody></table></div><p class="ob19-note">這是根據成本名稱建立的「管理分類建議」，不是 OneBoy 已核准的會計科目。「數位」只代表媒介觸達形式，不等於實際線上成交；實體／虛擬銷售通路必須有訂單歸因資料才可計算營收。相同的媒體費用不會同時計入兩類。</p></section>`;
 }
@@ -2552,6 +2658,7 @@ function ob19InsightFactors(){
 function ob19RenderMarketing(){const f=S.filters.marketing,rows=wkRowsFor(f),comp=wkComparison(rows,f),tot=ob19Totals(rows),dataDiff=tot.spend-ob19DetailSum(rows),scope=ob19PeriodTag(rows),comparison=comp.valid?ob19PeriodTag(comp.rows):'未啟用／資料不足';
  return `<div class="workspace-shell ob19-workspace">${wkFloatNav('marketing',[['ob19-start','期間'],['ob19-hero','主圖'],['ob19-structure','費用結構'],['ob19-annual','跨年'],['ob19-month-compare','月份同比'],['ob19-quarter','季度'],['ob19-lens','分析維度'],['ob19-monthly','明細'],['ob19-scenario','試算'],['ob19-ai','AI 建議'],['ob19-audit','核對']])}<div class="ws-head" id="ob19-start"><div><div class="ws-eyebrow">MARKETING INTELLIGENCE / EXCEL-VERIFIED COST LEDGER</div><h1>行銷投放｜原始成本 × 經營績效 × AI 試算</h1><p>依《3.3_行銷預算分配.xlsx》逐欄重建，保留所有 41 種原始成本科目及每月金額。</p></div><div class="ws-source"><span>2023–2025｜原始 Excel</span><span>來源科目全數保留</span><span>平台歸因營收：未提供</span></div></div>
  ${v18PeriodFilters('marketing',rows,comp)}
+ <div class="ob21-source-note"><b>2023 資料完整性：</b>1～8 月的總花費與總收益均有實際數字；只有 <strong>2023 年 5 月、8 月「月目標」未填</strong>。目標圖與比較表以「未填」顯示，不用 0 取代。<span>來源：《3.3_行銷預算分配.xlsx》</span></div>
  <div class="ob19-scope"><div><b>目前觀察期間</b><span>${ob19Esc(scope)}</span></div><div><b>比較期間</b><span>${ob19Esc(comparison)}</span></div><div><b>會影響哪些資訊？</b><span>主圖、KPI、成本圓餅、選期分析、AI 觀察；跨年 3 年總表與各年 12 月原始矩陣是固定年度資料。</span></div></div>
  <section class="ws-panel glass" id="ob19-hero"><div class="ws-panel-head"><div><h3>每月總收益／營收目標／行銷總花費</h3><p class="ws-muted">藍：總收益｜金：公司營收目標｜灰：行銷總花費｜紅虛線：比較期收益</p></div><span class="ws-chip">原始 Excel</span></div><div class="ob19-chart-scroll">${ob19MainChart(rows,comp)}</div></section>
  ${ob19KPI(rows,comp)}
@@ -2691,6 +2798,7 @@ function renderWorkspace(resetScroll=false){
  const at=resetScroll?0:scroll.scrollTop;
  holder.innerHTML=S.tab==='ai-plan'?ob20Render():S.tab==='marketing'?ob19RenderMarketing():S.tab==='operations'?renderOperationsWorkspace():S.tab==='orders'?renderOrdersWorkspace():S.tab==='shipping'?renderShippingWorkspace():S.tab==='finance'?renderFinanceWorkspace():'';
  scroll.scrollTop=at;
+ ob21BindWorkspaceUI();
  holder.onclick=e=>{
   const b=e.target.closest('[data-action]');if(!b)return;const act=b.dataset.action;
   if(act==='ob20-save-evidence'){const group=holder.querySelector('#ob20EvidenceGroup')?.value,year=Number(holder.querySelector('#ob20EvidenceYear')?.value),month=Number(holder.querySelector('#ob20EvidenceMonth')?.value),rawValue=holder.querySelector('#ob20EvidenceValue')?.value,value=Number(rawValue);if(group&&rawValue!==''&&Number.isFinite(value)&&value>=0&&value<=30){OB20_STATE.evidence[`${year}|${month}|${group}`]=value;OB20_STATE.evidenceGroup=group;OB20_STATE.evidenceYear=year;OB20_STATE.evidenceMonth=month;renderWorkspace();}else alert('請輸入有效的成效數值（0～30）。');}
@@ -2713,7 +2821,7 @@ function renderWorkspace(resetScroll=false){
   else if(act==='ship-expand'){S.shippingExpanded=S.shippingExpanded===b.dataset.order?null:b.dataset.order;renderWorkspace();}
   else if(act==='ops-channel'){const pos=scroll.scrollTop;S.opsChannelFocus=b.dataset.channel;renderWorkspace();scroll.scrollTop=pos;}
   else if(act==='case-jump'){holder.querySelector('#campaign-cases')?.scrollIntoView({block:'start',behavior:'smooth'});}
-  else if(act==='scroll-to'){holder.querySelector('#'+b.dataset.target)?.scrollIntoView({block:'start',behavior:'smooth'});b.closest('.wk-float-nav')?.querySelectorAll('.wk-float-btn').forEach(x=>x.classList.toggle('active',x===b));}
+  else if(act==='scroll-to'){holder.querySelector('#'+b.dataset.target)?.scrollIntoView({block:'start',behavior:'smooth'});b.closest('.wk-float-nav')?.querySelectorAll('.wk-float-btn').forEach(x=>x.classList.toggle('active',x===b));requestAnimationFrame(ob21SyncNav);}
   else if(act==='toggle-brand'){const k=b.dataset.brand;const q=new Set(S.channels);q.has(k)?q.delete(k):q.add(k);S.channels=WK_PLAT.filter(([id])=>q.has(id)).map(([id])=>id);renderWorkspace();}
   else if(act==='focus-channel'){const k=b.dataset.channel;S.channelFocus=k;if(!S.channels.includes(k))S.channels.push(k);S.channels=WK_PLAT.filter(([id])=>S.channels.includes(id)).map(([id])=>id);renderWorkspace();}
   else if(act==='only-channel'){S.channelFocus=b.dataset.channel;S.channels=[b.dataset.channel];renderWorkspace();}
